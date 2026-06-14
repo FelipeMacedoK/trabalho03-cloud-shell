@@ -1,24 +1,16 @@
 # Trabalho 03 - Linux, Shell Script e Cloud Computing
 
 ## Aluno
-Felipe Macedo — Sistemas de Informação — Unidavi
+Felipe Macedo - Sistemas de Informação - Unidavi
 
 ## Tema
 **DescomplicaBusiness — Sistema de Atendimento para um Pequeno Negócio**
-(tema recebido no Trabalho 01 e evoluído nos Trabalhos 02 e 03)
 
 ## Descrição do Projeto
-Atuando como profissional **júnior de DevOps**, preparei um ambiente Linux
-containerizado para operar o sistema de atendimento *DescomplicaBusiness*.
-O ambiente roda em um container **Ubuntu Server 22.04** com **Apache**, e toda a
-operação (atualização, instalação de serviços, estrutura de diretórios, backup,
-deploy, monitoramento, processos, usuários/permissões e relatórios) é
-automatizada por **scripts Shell**.
+Atuando como profissional **júnior de DevOps**, preparei um ambiente Linux containerizado para operar o sistema de atendimento *DescomplicaBusiness*.
+O ambiente roda em um container **Ubuntu Server 22.04** com **Apache**, e toda a operação (atualização, instalação de serviços, estrutura de diretórios, backup, deploy, monitoramento, processos, usuários/permissões e relatórios) é automatizada por **scripts Shell**.
 
-Relação com Cloud Computing: reproduz, em escala de laboratório, as rotinas
-operacionais que um time de infraestrutura executa em uma VM Linux na nuvem
-(como a EC2 modelada no Trabalho 01), com volume persistente equivalente ao
-armazenamento em bloco/objeto e deploy de um portal web.
+Relação com Cloud Computing: reproduz, em escala de laboratório, as rotinas operacionais que um time de infraestrutura executa em uma VM Linux na nuvem, com volume persistente equivalente ao armazenamento em bloco/objeto e deploy de um portal web.
 
 ## Tecnologias Utilizadas
 - Linux Ubuntu 22.04 (Server)
@@ -98,10 +90,6 @@ Dentro do container, na pasta `/app/scripts`:
 | 09_relatorio.sh | Gera `logs/relatorio_execucao.txt` | `./09_relatorio.sh` |
 | menu.sh | Menu interativo integrando tudo | `./menu.sh` |
 
-> Observação: scripts que mexem no sistema (01, 02, 05, 08) precisam de
-> privilégios. No container você já é `root`, então rodam direto. Em um host
-> Linux comum, use `sudo`.
-
 Exemplos do `06_processos.sh`:
 ```bash
 ./06_processos.sh listar
@@ -142,13 +130,7 @@ docker pull felipemacedok/descomplica-atendimento:1.0
 Link: https://hub.docker.com/r/felipemacedok/descomplica-atendimento
 
 ## Uso de Inteligência Artificial
-Utilizei IA (Claude) como apoio para revisar a lógica dos scripts, sugerir
-boas práticas de Shell (validação de root, uso de funções, tratamento de PID
-vazio) e organizar a documentação do README. Revisei e testei cada script
-manualmente no container, ajustei nomes de diretórios/usuários para o tema de
-atendimento e validei as saídas. Aprendi, na prática, como estruturar funções,
-registrar logs, gerar backups `.tar.gz` e aplicar permissões com `chown`/`chmod`
-sem expor dados com `777`.
+Utilizei IA (Claude) como apoio para revisar a lógica dos scripts, sugerir boas práticas de Shell (validação de root, uso de funções, tratamento de PID vazio) e organizar a documentação do README. Revisei e testei cada script manualmente no container, ajustei nomes de diretórios/usuários para o tema de atendimento e validei as saídas. Aprendi, na prática, como estruturar funções, registrar logs, gerar backups `.tar.gz` e aplicar permissões com `chown`/`chmod` sem expor dados com `777`.
 
 ## Dificuldades Encontradas
 - Garantir que o Apache subisse e o container permanecesse vivo ao mesmo tempo
