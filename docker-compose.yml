@@ -1,0 +1,25 @@
+# =====================================================================
+# DescomplicaBusiness - Trabalho 03
+# Orquestracao do ambiente Linux containerizado (Ubuntu + Apache)
+# =====================================================================
+services:
+  atendimento-linux:
+    build: .
+    image: felipemacedok/descomplica-atendimento:1.0
+    container_name: trabalho03-atendimento
+    ports:
+      # host:container  -> acesse o site em http://localhost:8080
+      - "8080:80"
+    volumes:
+      # Volume nomeado e persistente para os dados operacionais do tema.
+      # Backups, logs e dados do sistema de atendimento sobrevivem ao
+      # "docker compose down".
+      - atendimento_dados:/app/dados
+      - atendimento_backups:/app/backups
+      - atendimento_logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  atendimento_dados:
+  atendimento_backups:
+  atendimento_logs:

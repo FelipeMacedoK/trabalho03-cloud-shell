@@ -1,0 +1,56 @@
+/* DescomplicaBusiness - Portal de Atendimento (Trabalho 03) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #243b53;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #0b6fb8, #11998e);
+    color: #fff;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+}
+header h1 { font-size: 2.2rem; letter-spacing: 1px; }
+header p  { opacity: 0.9; }
+
+nav { margin-top: 1rem; }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+nav a:hover { border-bottom: 2px solid #fff; }
+
+main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.card h2 { color: #0b6fb8; margin-bottom: 0.6rem; }
+.card ul { margin-left: 1.2rem; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+.cards .card { text-align: center; }
+.cards h3 { color: #11998e; margin-bottom: 0.4rem; }
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    color: #627d98;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,6 @@
+# Nao enviar conteudo gerado / pesado para o contexto de build
+backups/
+logs/
+evidencias/
+.git/
+*.tar.gz

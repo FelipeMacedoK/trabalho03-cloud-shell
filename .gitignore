@@ -1,0 +1,8 @@
+# Ignora artefatos gerados, mas mantem as pastas (via .gitkeep)
+backups/*.tar.gz
+logs/*.log
+logs/relatorio_execucao.txt
+
+# Mantem as pastas vazias no repositorio
+!backups/.gitkeep
+!logs/.gitkeep
