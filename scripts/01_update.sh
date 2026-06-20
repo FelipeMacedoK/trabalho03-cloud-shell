@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # =====================================================================
 # 01_update.sh - Atualizacao do Sistema
 # Projeto: DescomplicaBusiness (Sistema de Atendimento)
